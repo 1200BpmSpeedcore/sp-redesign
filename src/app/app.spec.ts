@@ -1,11 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
+import { appConfig } from './app.config';
 
 describe('App', () => {
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [App],
-    }).compileComponents();
+    await TestBed.configureTestingModule(appConfig).compileComponents();
   });
 
   it('should create the app', () => {
@@ -14,10 +13,15 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
+  it('should have useLanguage method', () => {
     const fixture = TestBed.createComponent(App);
-    await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, sp-redesign');
+    const app = fixture.componentInstance;
+    expect(typeof app.useLanguage).toBe('function');
+  });
+
+  it('should have title "sp-redesign"', () => {
+    const fixture = TestBed.createComponent(App);
+    const app = fixture.componentInstance;
+    expect(app['title']()).toBe('sp-redesign');
   });
 });
