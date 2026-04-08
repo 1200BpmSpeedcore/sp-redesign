@@ -1,10 +1,13 @@
 <div class="app-shell">
-  <header>
-    <h1>{{ title() }}</h1>
-  </header>
+    <header>
+      <h1>{{ title() }}</h1>
+    </header>
 
+    <p>{{ 'DESCRIPTION' | translate }}</p>
+    <span>{{ 'BUTTON' | translate }}</span>
+    <button (click)="useLanguage('en')">en</button>
+    <button (click)="useLanguage('de')">de</button>
   <main>
-    <p>Hello World</p>
     <router-outlet></router-outlet>
   </main>
 </div>
