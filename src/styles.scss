@@ -4,6 +4,10 @@ body {
 
   strong, b, .bold, .fw-bold,
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 800;
+    font-weight: 800 !important;
   }
+}
+
+.border {
+  border-color: #9fa3a3 !important;
 }

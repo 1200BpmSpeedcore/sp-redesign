@@ -1,4 +1,26 @@
 {
   "DESCRIPTION": "This is a simple multilingual skeleton using ngx-translate 17.",
-  "BUTTON": "Click me"
+  "BUTTON": "Click me",
+
+  "sidebar": {
+    "name": {
+      "label": "Name",
+      "text": "Tom (Avery) Brauer"
+    },
+    "pronouns": {
+      "label": "Pronouns",
+      "text": "they/ them/ theirs"
+    },
+    "location": {
+      "label": "Location",
+      "text": "Leipzig, Saxony, Germany"
+    },
+    "last-position": {
+      "label": "Last Position",
+      "text": "Trainee IT Specialist for Application Development"
+    },
+    "worked-at": {
+      "label": "Worked at"
+    }
+  }
 }

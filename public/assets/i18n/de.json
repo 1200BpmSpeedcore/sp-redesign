@@ -1,4 +1,26 @@
 {
   "DESCRIPTION": "Dies ist ein einfaches Mehrsprachigkeits-Skeleton mit ngx-translate 17.",
-  "BUTTON": "Klick mich"
+  "BUTTON": "Klick mich",
+
+  "sidebar": {
+    "name": {
+      "label": "Name",
+      "text": "Tom (Avery) Brauer"
+    },
+    "pronouns": {
+      "label": "Pronomen",
+      "text": "they/ them/ theirs"
+    },
+    "location": {
+      "label": "Ort",
+      "text": "Leipzig, Sachsen, Deutschland"
+    },
+    "last-position": {
+      "label": "Letzte Position",
+      "text": "Auszubildender Fachinformatiker für Anwendungsentwicklung"
+    },
+    "worked-at": {
+      "label": "Arbeitete bei"
+    }
+  }
 }
