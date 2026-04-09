@@ -3,11 +3,14 @@ import { RouterOutlet } from '@angular/router';
 
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
+import { Sidebar } from './component/sidebar/sidebar';
+
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    TranslatePipe
+    TranslatePipe,
+    Sidebar
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

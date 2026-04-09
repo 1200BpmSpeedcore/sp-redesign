@@ -1,0 +1,46 @@
+<aside class="sidebar d-flex flex-column h-100 border border-2">
+  <div class="text-left">
+    <div class="pt-2 mb-2 text-center">
+      <img src="/images/avatar.png" alt="Spieler Avatar" width="250" height="300" class="border border-2"/>
+    </div>
+
+    <div class="pt-2 px-2 border-top border-2">
+      <p>
+        <span class="fw-bold d-block">{{ 'sidebar.name.label' | translate }}</span>
+        <span>{{ 'sidebar.name.text' | translate }}</span>
+      </p>
+
+      <p>
+        <span class="fw-bold d-block">{{ 'sidebar.pronouns.label' | translate }}</span>
+        <span>{{ 'sidebar.pronouns.text' | translate }}</span>
+      </p>
+
+      <p>
+        <span class="fw-bold d-block">{{ 'sidebar.location.label' | translate }}</span>
+        <span>{{ 'sidebar.location.text' | translate }}</span>
+      </p>
+
+      <p>
+        <span class="fw-bold d-block">{{ 'sidebar.last-position.label' | translate }}</span>
+        <span>{{ 'sidebar.last-position.text' | translate }}</span>
+      </p>
+    </div>
+
+    <div class="worked-at-header px-2 d-flex justify-content-between align-items-center">
+      <h4 class="text-white mb-0">{{ 'sidebar.worked-at.label' | translate }}</h4>
+      <h1 class="mb-0 company-count">{{ companies.length }}</h1>
+    </div>
+
+    <div class="row g-1 px-2 pt-2">
+      @for (c of companies; track c.id) {
+        <div class="col-4">
+          <a [href]="c.url" target="_blank" [title]="c.name"
+            class="d-flex align-items-center justify-content-center bg-white ratio ratio-1x1"
+          >
+            <img [src]="c.logo" [alt]="c.name" class="img-fluid p-1 company-logo"/>
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</aside>
